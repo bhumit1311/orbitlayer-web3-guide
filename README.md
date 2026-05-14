@@ -6,6 +6,8 @@ Built by **Bhumit**.
 
 GitHub: https://github.com/bhumit1311
 
+Live Site: https://bhumit1311.github.io/orbitlayer-web3-guide/
+
 ## Pages
 
 - **Home / Landing**: Introduces Arbitrum and explains why Ethereum needs Layer 2 networks.
