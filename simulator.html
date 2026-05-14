@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Simulator | OrbitLayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">O</span><span>OrbitLayer</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="concepts.html">Concepts</a>
+        <a href="prices.html">Live Prices</a>
+        <a class="active" href="simulator.html">Block Simulator</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero shell">
+      <p class="eyebrow">Proof-of-work demo</p>
+      <h1>Mine blocks and watch the chain react.</h1>
+      <p>Each block hashes its data, previous hash, and nonce. A valid mined block starts with <strong>00</strong>. Change Block 1 after mining and Block 2 becomes invalid.</p>
+    </section>
+
+    <section class="shell simulator-grid">
+      <article class="sim-card" id="block1Card">
+        <div class="sim-card-head">
+          <h2>Block 1</h2>
+          <span class="valid-pill invalid" id="block1Status">Invalid</span>
+        </div>
+        <label>
+          Block Data
+          <textarea id="block1Data" rows="4">Alice sends 0.5 ETH to Bob on Arbitrum</textarea>
+        </label>
+        <label>
+          Previous Hash
+          <input id="block1Prev" type="text" value="0000000000000000genesis" readonly>
+        </label>
+        <label>
+          Nonce
+          <input id="block1Nonce" type="number" value="0" min="0">
+        </label>
+        <button class="button primary mine-button" data-block="1" type="button">Mine Block 1</button>
+        <div class="hash-box">
+          <span>Hash</span>
+          <code id="block1Hash">Waiting for hash...</code>
+        </div>
+      </article>
+
+      <article class="sim-card" id="block2Card">
+        <div class="sim-card-head">
+          <h2>Block 2</h2>
+          <span class="valid-pill invalid" id="block2Status">Invalid</span>
+        </div>
+        <label>
+          Block Data
+          <textarea id="block2Data" rows="4">Bob swaps ETH for ARB in a Layer 2 app</textarea>
+        </label>
+        <label>
+          Previous Hash
+          <input id="block2Prev" type="text" readonly>
+        </label>
+        <label>
+          Nonce
+          <input id="block2Nonce" type="number" value="0" min="0">
+        </label>
+        <button class="button primary mine-button" data-block="2" type="button">Mine Block 2</button>
+        <div class="hash-box">
+          <span>Hash</span>
+          <code id="block2Hash">Waiting for hash...</code>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p>Built by <strong>Bhumit</strong> for <strong>Arbitrum Builder Pods</strong>.</p>
+      <a href="https://github.com/bhumit1311" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

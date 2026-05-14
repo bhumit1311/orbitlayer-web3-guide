@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Prices | OrbitLayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">O</span><span>OrbitLayer</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="concepts.html">Concepts</a>
+        <a class="active" href="prices.html">Live Prices</a>
+        <a href="simulator.html">Block Simulator</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero shell dashboard-top">
+      <div>
+        <p class="eyebrow">CoinGecko dashboard</p>
+        <h1>Live crypto prices for Web3 builders.</h1>
+        <p>Track ETH and BTC in real time, then refresh the cards whenever you want the latest market snapshot.</p>
+      </div>
+      <button class="button primary" id="refreshPrices" type="button">Refresh prices</button>
+    </section>
+
+    <section class="shell">
+      <div class="status-row" id="priceStatus">Loading latest prices...</div>
+      <div class="price-grid" id="priceGrid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <p>Built by <strong>Bhumit</strong> for <strong>Arbitrum Builder Pods</strong>.</p>
+      <a href="https://github.com/bhumit1311" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
